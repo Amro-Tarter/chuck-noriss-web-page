@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="MainPage.css">
+    <script src="ChuckMovies.js"></script>
+    <script src="MainPage.js" defer></script>
+</head>
+<body onload="initializePage()">
+    <div class="container">
+        <header class="header">Amro Tarter</header>
+
+        <section class="content">
+            <div class="image">
+                <img id="chuckImage" src="" alt="צ'ק נוריס">
+            </div>
+            <div class="text">
+              <b>
+                Chuck Norris is an American martial artist, actor, and author.
+                 He rose to fame in the 1970s and 1980s with action films like The Way of the Dragon and Missing in Action and starred in Walker, Texas Ranger (1993–2001). Beyond acting, he's a bestselling author and gained internet fame with "Chuck Norris Facts."
+            </b>
+        </section>
+
+        <section class="table" >
+            <h3>some of Chuck Norris movies</h3>
+            <table id="moviesTable">
+                <thead>
+                    <tr>
+                        <th>movie name</th>
+                        <th>year</th>
+                        <th>role</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="filter">
+            <h3>movie filter</h3>
+            <input type="text" id="yearFilter" placeholder="year">
+            <button id="search" class="buttons" onclick="filterMovies()">filter</button>
+            <p id="errorMessage" class="error"></p>
+        </section>
+
+        <section class="empty">
+            <h3>A joke of Chuck</h3>
+            <div id="jokeContainer"></div>
+        </section>
+
+        <section class="buttons">
+            <button id="getJoke" onclick="fetchJoke()">Get</button>
+            <button id="likeJoke" onclick="likeJoke()" disabled>Like</button>
+            <button id="dislikeJoke" onclick="dislikeJoke()" disabled>Dislike</button>
+            <button id="clearJoke" onclick="clearJoke()" disabled>Clear</button>
+        </section>
+    </div>
+</body>
+</html>
